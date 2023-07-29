@@ -76,6 +76,26 @@
           </li>
 
 
+          <li class="nav-item ">
+            <a href="{{ route('choose.index') }}" class="nav-link {{ Route::is('choose.index')  ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tag"></i>
+              <p>
+               Why Choose Us
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item ">
+            <a href="{{ route('testimonial.index') }}" class="nav-link {{ Route::is('testimonial.index')  ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tag"></i>
+              <p>
+                Testimonial
+              </p>
+            </a>
+          </li>
+
+
 
           <li class="nav-item">
             <a href="#" class="nav-link">

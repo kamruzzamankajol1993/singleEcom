@@ -1,7 +1,7 @@
 @extends('admin.master.master')
 
 @section('title')
-Service
+Choose Us
 @endsection
 
 
@@ -11,12 +11,12 @@ Service
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Service</h1>
+          <h1 class="m-0">Choose Us</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Service</li>
+            <li class="breadcrumb-item active">Choose Us</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -32,7 +32,7 @@ Service
       <div class="row">
 
         <div class="col-md-6">
-            @if(count($categoryList) == 6)
+            @if(count($categoryList) == 3)
 
             @else
             <button type="button" data-toggle="modal" data-target="#modal-default" class="btn  bg-gradient-primary"><i class="fas fa-plus"></i> Add</button>
@@ -41,46 +41,55 @@ Service
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title">Add Service</h4>
+                      <h4 class="modal-title">Add Choose Us</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('service.store') }}"  method="post" enctype="multipart/form-data" id="form" data-parsley-validate="">
+                        <form action="{{ route('choose.store') }}"  method="post" enctype="multipart/form-data" id="form" data-parsley-validate="">
 
                             @csrf
 
                             <div class="row">
                                 <div class="col-xxl-12 col-md-12">
                                     <div>
-                                        <label for="" class="form-label">Icon Name</label>
-                                        <input type="text" class="form-control"  placeholder="Icon Name" name="icon_name" required>
+                                        <label for="" class="form-label">Title One</label>
+                                        <input type="text" class="form-control"  placeholder="Title One" name="title_one" required>
                                     </div>
                                 </div>
 
 
                                 <div class="col-xxl-12 col-md-12">
                                     <div>
-                                        <label for="" class="form-label">Title </label>
-                                        <input type="text" class="form-control"  placeholder="Title" name="title" required>
+                                        <label for="" class="form-label">Title Two</label>
+                                        <input type="text" class="form-control"  placeholder="Title Two" name="title_two" required>
                                     </div>
                                 </div>
 
 
                                 <div class="col-xxl-12 col-md-12">
                                     <div>
-                                        <label for="" class="form-label">Description</label>
-                                        <input type="text" class="form-control" placeholder="Description" name="des" required>
+                                        <label for="" class="form-label">Animate Title</label>
+                                        <input type="text" class="form-control"  placeholder="Animate Title" name="animate_title" required>
                                     </div>
                                 </div>
 
 
+                                <div class="col-xxl-12 col-md-12">
+                                    <div>
+                                        <label for="" class="form-label"> Image One</label>
+                                        <input type="file" class="form-control" id="" placeholder="Image" name="image">
+
+                                    </div>
+                                </div>
+
 
                                 <div class="col-xxl-12 col-md-12">
                                     <div>
-                                        <label for="" class="form-label">Background Color Code</label>
-                                        <input type="text" class="form-control" placeholder="Background Color" name="background_color" required>
+                                        <label for="" class="form-label">Image Two</label>
+                                        <input type="file" class="form-control" id="" placeholder="Image" name="image_one">
+
                                     </div>
                                 </div>
 
@@ -107,7 +116,7 @@ Service
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Service List</h3>
+                  <h3 class="card-title">Choose Us List</h3>
                   @include('flash_message')
                 </div>
                 <!-- /.card-header -->
@@ -116,10 +125,11 @@ Service
                     <thead>
                     <tr>
                       <th>Sl</th>
-                      <th>Icon Name</th>
-                      <th>Title</th>
-                      <th>Description</th>
-                      <th>Background Color Code</th>
+                      <th>Title One</th>
+                      <th>Title Two</th>
+                      <th>Animate Title</th>
+                      <th>Image One</th>
+                      <th>Image Two</th>
                       <th>Action</th>
                     </tr>
                     </thead>
@@ -127,10 +137,11 @@ Service
                         @foreach($categoryList as $key=>$allCategoryList)
                     <tr>
                       <td>{{ $key+1 }}</td>
-                      <td>{{ $allCategoryList->icon_name }}</td>
-                      <td>{{ $allCategoryList->title }}</td>
-                      <td>{{ $allCategoryList->des }}</td>
-                      <td>{{ $allCategoryList->background_color }}</td>
+                      <td>{{ $allCategoryList->title_one }}</td>
+                      <td>{{ $allCategoryList->title_two }}</td>
+                      <td>{{ $allCategoryList->animate_title }}</td>
+                      <td><img src="{{ asset('/') }}{{$allCategoryList->image }}" style="height:50px;"/></td>
+                      <td><img src="{{ asset('/') }}{{$allCategoryList->image_one }}" style="height:50px;"/></td>
                       <td>
 
 
@@ -140,48 +151,58 @@ Service
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h4 class="modal-title">Update Service</h4>
+                                  <h4 class="modal-title">Update Choose Us</h4>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="{{ route('service.update',$allCategoryList->id) }}"  method="post" enctype="multipart/form-data" id="form" data-parsley-validate="">
+                                    <form action="{{ route('choose.update',$allCategoryList->id) }}"  method="post" enctype="multipart/form-data" id="form" data-parsley-validate="">
 
                                         @csrf
                                         @method('PUT')
                                         <div class="row">
                                             <div class="col-xxl-12 col-md-12">
                                                 <div>
-                                                    <label for="" class="form-label">Icon Name</label>
-                                                    <input type="text" class="form-control" value="{{ $allCategoryList->icon_name }}" placeholder="Icon Name" name="icon_name" required>
+                                                    <label for="" class="form-label">Title One</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->title_one }}" placeholder="Title One" name="title_one" required>
                                                 </div>
                                             </div>
 
 
                                             <div class="col-xxl-12 col-md-12">
                                                 <div>
-                                                    <label for="" class="form-label">Title </label>
-                                                    <input type="text" class="form-control" value="{{ $allCategoryList->title}}" placeholder="Title" name="title" required>
+                                                    <label for="" class="form-label">Title Two</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->title_two }}" placeholder="Title Two" name="title_two" required>
                                                 </div>
                                             </div>
 
 
                                             <div class="col-xxl-12 col-md-12">
                                                 <div>
-                                                    <label for="" class="form-label">Description</label>
-                                                    <input type="text" class="form-control" value="{{ $allCategoryList->des }}" placeholder="Description" name="des" required>
+                                                    <label for="" class="form-label">Animate Title</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->animate_title }}"  placeholder="Animate Title" name="animate_title" required>
                                                 </div>
                                             </div>
-
 
 
                                             <div class="col-xxl-12 col-md-12">
                                                 <div>
-                                                    <label for="" class="form-label">Background Color Code</label>
-                                                    <input type="text" class="form-control" value="{{ $allCategoryList->background_color }}" placeholder="Background Color" name="background_color" required>
+                                                    <label for="" class="form-label">Image One</label>
+                                                    <input type="file" class="form-control" id="" placeholder="Image" name="image">
+                                                    <img src="{{ asset('/') }}{{$allCategoryList->image }}" style="height:50px;"/>
                                                 </div>
                                             </div>
+
+
+                                            <div class="col-xxl-12 col-md-12">
+                                                <div>
+                                                    <label for="" class="form-label">Image Two</label>
+                                                    <input type="file" class="form-control" id="" placeholder="Image" name="image_one">
+                                                    <img src="{{ asset('/') }}{{$allCategoryList->image_one }}" style="height:50px;"/>
+                                                </div>
+                                            </div>
+
 
 
 
@@ -204,7 +225,7 @@ Service
 
 
                         <button   type="button" class="btn btn-danger waves-light waves-effect  " onclick="deleteTag({{ $allCategoryList->id}})" data-toggle="tooltip" title="Delete"><i class="fas fa-trash"></i></button>
-                    <form id="delete-form-{{ $allCategoryList->id }}" action="{{ route('service.destroy',$allCategoryList->id) }}" method="POST" style="display: none;">
+                    <form id="delete-form-{{ $allCategoryList->id }}" action="{{ route('choose.destroy',$allCategoryList->id) }}" method="POST" style="display: none;">
                       @method('DELETE')
                                                     @csrf
 
