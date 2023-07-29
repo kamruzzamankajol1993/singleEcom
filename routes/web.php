@@ -10,6 +10,17 @@ use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\Front\CartController;
 use App\Http\Controllers\Front\CheckOutController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\BillingController;
+use App\Http\Controllers\Admin\ChooseController;
+use App\Http\Controllers\Admin\MainTitleController;
+use App\Http\Controllers\Admin\PolicyController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\SeoController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ShippingController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\TestimonialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +31,19 @@ use App\Http\Controllers\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::resource('aboutUs', AboutUsController::class);
+Route::resource('billing', BillingController::class);
+Route::resource('choose', ChooseController::class);
+Route::resource('mainTitle', MainTitleController::class);
+Route::resource('policy', PolicyController::class);
+Route::resource('product', ProductController::class);
+
+Route::resource('seo', SeoController::class);
+Route::resource('service', ServiceController::class);
+Route::resource('shipping', ShippingController::class);
+Route::resource('slider', SliderController::class);
+Route::resource('testimonial', TestimonialController::class);
 
 
 

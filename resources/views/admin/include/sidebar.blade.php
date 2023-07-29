@@ -34,17 +34,48 @@
             </a>
           </li>
 
-          <li class="nav-header">MENU LIST</li>
+          <li class="nav-header">NAV BAR</li>
 
 
           <li class="nav-item ">
-            <a href="{{ route('category.index') }}" class="nav-link {{ Route::is('category.index')  ? 'active' : '' }}">
+            <a href="{{ route('mainTitle.index') }}" class="nav-link {{ Route::is('mainTitle.index')  ? 'active' : '' }}">
               <i class="nav-icon fas fa-tag"></i>
               <p>
-               Category
+               Main Title
               </p>
             </a>
           </li>
+
+
+          <li class="nav-item ">
+            <a href="{{ route('slider.index') }}" class="nav-link {{ Route::is('slider.index')  ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tag"></i>
+              <p>
+               Slider
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="{{ route('service.index') }}" class="nav-link {{ Route::is('service.index')  ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tag"></i>
+              <p>
+               Service
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item ">
+            <a href="{{ route('aboutUs.index') }}" class="nav-link {{ Route::is('aboutUs.index')  ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tag"></i>
+              <p>
+               About Us
+              </p>
+            </a>
+          </li>
+
+
 
           <li class="nav-item">
             <a href="#" class="nav-link">
