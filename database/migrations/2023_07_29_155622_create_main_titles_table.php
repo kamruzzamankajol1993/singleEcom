@@ -16,6 +16,12 @@ return new class extends Migration
         Schema::create('main_titles', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('service_title')->nullable();
+            $table->string('about_title')->nullable();
+            $table->string('choose_title')->nullable();
+            $table->string('tesi_title')->nullable();
+            $table->string('product_title')->nullable();
+            $table->string('billing_title')->nullable();
             $table->timestamps();
         });
     }

@@ -62,7 +62,48 @@ Main Title
                                 </div>
 
 
+                                <div class="col-xxl-12 col-md-12">
+                                    <div>
+                                        <label for="" class="form-label">Service Title</label>
+                                        <input type="text" class="form-control"  placeholder="Title" name="service_title" required>
+                                    </div>
+                                </div>
 
+                                <div class="col-xxl-12 col-md-12">
+                                    <div>
+                                        <label for="" class="form-label">About Us Title</label>
+                                        <input type="text" class="form-control"  placeholder="Title" name="about_title" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-12 col-md-12">
+                                    <div>
+                                        <label for="" class="form-label">Choose Us Title</label>
+                                        <input type="text" class="form-control"  placeholder="Title" name="choose_title" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xxl-12 col-md-12">
+                                    <div>
+                                        <label for="" class="form-label">Testimonial Title</label>
+                                        <input type="text" class="form-control"  placeholder="Title" name="tesi_title" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-12 col-md-12">
+                                    <div>
+                                        <label for="" class="form-label">Product Title</label>
+                                        <input type="text" class="form-control"  placeholder="Title" name="product_title" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-12 col-md-12">
+                                    <div>
+                                        <label for="" class="form-label">Billing Title</label>
+                                        <input type="text" class="form-control"  placeholder="Title" name="billing_title" required>
+                                    </div>
+                                </div>
 
 
 
@@ -97,8 +138,12 @@ Main Title
                     <tr>
                       <th>Sl</th>
                       <th>Title</th>
-
-
+                      <th>Service Title</th>
+                      <th>About Title</th>
+                      <th>Choose us Title</th>
+                      <th>Testimonial Title</th>
+                      <th>Product Title</th>
+                      <th>Billing Title</th>
                       <th>Action</th>
                     </tr>
                     </thead>
@@ -106,8 +151,13 @@ Main Title
                         @foreach($categoryList as $key=>$allCategoryList)
                     <tr>
                       <td>{{ $key+1 }}</td>
-                      <td>{{ $allCategoryList->title }}
-                      </td>
+                      <td>{{ $allCategoryList->title }}</td>
+                      <td>{{ $allCategoryList->service_title }}</td>
+                      <td>{{ $allCategoryList->about_title }}</td>
+                      <td>{{ $allCategoryList->choose_title }}</td>
+                      <td>{{ $allCategoryList->tesi_title }}</td>
+                      <td>{{ $allCategoryList->product_title }}</td>
+                      <td>{{ $allCategoryList->billing_title }}</td>
 
 <td>
 
@@ -137,9 +187,48 @@ Main Title
 
 
 
+                                            <div class="col-xxl-12 col-md-12">
+                                                <div>
+                                                    <label for="" class="form-label">Service Title</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->service_title }}" placeholder="Title" name="service_title" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xxl-12 col-md-12">
+                                                <div>
+                                                    <label for="" class="form-label">About Us Title</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->about_title }}" placeholder="Title" name="about_title" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xxl-12 col-md-12">
+                                                <div>
+                                                    <label for="" class="form-label">Choose Us Title</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->choose_title }}" placeholder="Title" name="choose_title" required>
+                                                </div>
+                                            </div>
 
 
+                                            <div class="col-xxl-12 col-md-12">
+                                                <div>
+                                                    <label for="" class="form-label">Testimonial Title</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->tesi_title }}" placeholder="Title" name="tesi_title" required>
+                                                </div>
+                                            </div>
 
+                                            <div class="col-xxl-12 col-md-12">
+                                                <div>
+                                                    <label for="" class="form-label">Product Title</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->product_title }}" placeholder="Title" name="product_title" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xxl-12 col-md-12">
+                                                <div>
+                                                    <label for="" class="form-label">Billing Title</label>
+                                                    <input type="text" class="form-control" value="{{ $allCategoryList->billing_title }}" placeholder="Title" name="billing_title" required>
+                                                </div>
+                                            </div>
 
 
 

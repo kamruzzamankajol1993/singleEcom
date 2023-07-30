@@ -82,6 +82,7 @@ Slider
                                         <input type="file" class="form-control" id="" placeholder="Image" name="small_image">
 
                                     </div>
+                                    <small style="font-weight: 900;color:red;">Image Size:(47*47)px;format:png</small>
                                 </div>
 
 
@@ -91,6 +92,7 @@ Slider
                                         <input type="file" class="form-control" id="" placeholder="Image" name="big_image">
 
                                     </div>
+                                    <small style="font-weight: 900;color:red;">Image Size:(685*607)px;format:png</small>
                                 </div>
 
 
@@ -192,6 +194,7 @@ Slider
                                                     <input type="file" class="form-control" id="" placeholder="Image" name="small_image">
                                                     <img src="{{ asset('/') }}{{$allCategoryList->small_image }}" style="height:50px;"/>
                                                 </div>
+                                                <small style="font-weight: 900;color:red;">Image Size:(47*47)px;format:png</small>
                                             </div>
 
 
@@ -201,6 +204,7 @@ Slider
                                                     <input type="file" class="form-control" id="" placeholder="Image" name="big_image">
                                                     <img src="{{ asset('/') }}{{$allCategoryList->big_image }}" style="height:50px;"/>
                                                 </div>
+                                                <small style="font-weight: 900;color:red;">Image Size:(685*607)px;format:png</small>
                                             </div>
 
 

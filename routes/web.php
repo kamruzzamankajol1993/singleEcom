@@ -21,6 +21,8 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ShippingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\SocialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +34,9 @@ use App\Http\Controllers\Admin\TestimonialController;
 |
 */
 
+
+Route::resource('social', SocialController::class);
+Route::resource('contactUs', ContactController::class);
 Route::resource('aboutUs', AboutUsController::class);
 Route::resource('billing', BillingController::class);
 Route::resource('choose', ChooseController::class);

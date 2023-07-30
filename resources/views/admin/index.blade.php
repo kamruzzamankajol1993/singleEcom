@@ -50,7 +50,7 @@ Dashboard
             <div class="inner">
               <h3>{{ $totalPendingOrder }}</h3>
 
-              <p>Pending Order</p>
+              <p>Total Pending Order</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -63,9 +63,9 @@ Dashboard
           <!-- small box -->
           <div class="small-box bg-warning">
             <div class="inner">
-              <h3>{{ $totalMenu }}</h3>
+              <h3>{{ $totaldeliveredOrder }}</h3>
 
-              <p>Total Menu</p>
+              <p>Total Delivered Order</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -78,9 +78,9 @@ Dashboard
           <!-- small box -->
           <div class="small-box bg-danger">
             <div class="inner">
-              <h3>{{ $totalFood }}</h3>
+              <h3>{{ $totalCancelledOrder }}</h3>
 
-              <p>Total Food Item</p>
+              <p>Total Cancelled Order</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>

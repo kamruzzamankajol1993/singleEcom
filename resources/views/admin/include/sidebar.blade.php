@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{ asset('/') }}public/logo/logo.jpeg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Nanna Briyani</span>
+      <img src="{{ asset('/') }}{{ $seoInfoIcon }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">{{ $seoInfoTitle }}</span>
     </a>
 
     <!-- Sidebar -->
@@ -10,7 +10,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{ asset('/') }}public/logo/logo.jpeg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ asset('/') }}{{ $seoInfoIcon }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -39,7 +39,8 @@
 
           <li class="nav-item ">
             <a href="{{ route('mainTitle.index') }}" class="nav-link {{ Route::is('mainTitle.index')  ? 'active' : '' }}">
-              <i class="nav-icon fas fa-tag"></i>
+
+              <i class="nav-icon fas fa-clipboard-list"></i>
               <p>
                Main Title
               </p>
@@ -49,7 +50,7 @@
 
           <li class="nav-item ">
             <a href="{{ route('slider.index') }}" class="nav-link {{ Route::is('slider.index')  ? 'active' : '' }}">
-              <i class="nav-icon fas fa-tag"></i>
+                <i class="nav-icon fas fa-images"></i>
               <p>
                Slider
               </p>
@@ -58,7 +59,7 @@
 
           <li class="nav-item ">
             <a href="{{ route('service.index') }}" class="nav-link {{ Route::is('service.index')  ? 'active' : '' }}">
-              <i class="nav-icon fas fa-tag"></i>
+                <i class="nav-icon far fa-file-alt"></i>
               <p>
                Service
               </p>
@@ -68,7 +69,7 @@
 
           <li class="nav-item ">
             <a href="{{ route('aboutUs.index') }}" class="nav-link {{ Route::is('aboutUs.index')  ? 'active' : '' }}">
-              <i class="nav-icon fas fa-tag"></i>
+                <i class="nav-icon far fa-copy"></i>
               <p>
                About Us
               </p>
@@ -88,7 +89,7 @@
 
           <li class="nav-item ">
             <a href="{{ route('testimonial.index') }}" class="nav-link {{ Route::is('testimonial.index')  ? 'active' : '' }}">
-              <i class="nav-icon fas fa-tag"></i>
+                <i class="nav-icon far fa-id-card"></i>
               <p>
                 Testimonial
               </p>
@@ -96,90 +97,73 @@
           </li>
 
 
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-pizza-slice"></i>
+          <li class="nav-item ">
+            <a href="{{ route('product.index') }}" class="nav-link {{ Route::is('product.index')  ? 'active' : '' }}">
+                <i class="nav-icon fas fa-clipboard-list"></i>
               <p>
-                Food
-                <i class="fas fa-angle-left right"></i>
+                Product
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('food.create') }}" class="nav-link {{ Route::is('food.create')  ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Food</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('food.index') }}" class="nav-link {{ Route::is('food.index')  ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Food List</p>
-                </a>
-              </li>
-            </ul>
           </li>
 
-
-          {{-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-clipboard-list"></i>
+          <li class="nav-item ">
+            <a href="{{ route('billing.index') }}" class="nav-link {{ Route::is('billing.index')  ? 'active' : '' }}">
+                <i class="nav-icon fas fa-cart-plus"></i>
               <p>
-                Menu
-                <i class="fas fa-angle-left right"></i>
+                Order
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('menu.create') }}" class="nav-link {{ Route::is('menu.create')  ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('menu.index') }}" class="nav-link {{ Route::is('menu.index')  ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Menu List</p>
-                </a>
-              </li>
-            </ul>
-          </li> --}}
+          </li>
 
 
           <li class="nav-item ">
-            <a href="{{ route('zipCode.index') }}" class="nav-link {{ Route::is('zipCode.index')  ? 'active' : '' }}">
-              <i class="nav-icon fas fa-map-marker"></i>
+            <a href="{{ route('contactUs.index') }}" class="nav-link {{ Route::is('contactUs.index')  ? 'active' : '' }}">
+                <i class="nav-icon fas fa-address-card"></i>
               <p>
-               Zip Code
+                Contact Information
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="{{ route('social.index') }}" class="nav-link {{ Route::is('social.index')  ? 'active' : '' }}">
+                <i class="nav-icon fas fa-link"></i>
+              <p>
+                Social Link
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="{{ route('policy.index') }}" class="nav-link {{ Route::is('policy.index')  ? 'active' : '' }}">
+                <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+                Policy Pages
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="{{ route('shipping.index') }}" class="nav-link {{ Route::is('shipping.index')  ? 'active' : '' }}">
+                <i class="nav-icon fas fa-shipping-fast"></i>
+              <p>
+                Shipping Price
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="{{ route('seo.index') }}" class="nav-link {{ Route::is('seo.index')  ? 'active' : '' }}">
+                <i class="nav-icon fas fa-info-circle"></i>
+              <p>
+               Seo Information
               </p>
             </a>
           </li>
 
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cart-plus"></i>
-              <p>
-                Order
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('order.index') }}" class="nav-link {{ Route::is('order.index')  ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>New Order</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('allOrder') }}" class="nav-link {{ Route::is('allOrder')  ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Old Order</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+
+
 
           <li class="nav-item ">
             <a href="{{ route('logout') }}"

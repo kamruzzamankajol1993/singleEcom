@@ -24,6 +24,12 @@ class MainTitleController extends Controller
 
         $category =new MainTitle();
         $category->title = $request->title;
+        $category->service_title= $request->service_title;
+        $category->about_title = $request->about_title;
+        $category->choose_title = $request->choose_title;
+        $category->tesi_title = $request->tesi_title;
+        $category->product_title = $request->product_title;
+        $category->billing_title = $request->billing_title;
         $category->save();
         return redirect()->route('mainTitle.index')->with('success','Added successfully!');
     }
@@ -35,6 +41,12 @@ class MainTitleController extends Controller
 
             $category =MainTitle::find($id);
             $category->title = $request->title;
+            $category->service_title= $request->service_title;
+            $category->about_title = $request->about_title;
+            $category->choose_title = $request->choose_title;
+            $category->tesi_title = $request->tesi_title;
+            $category->product_title = $request->product_title;
+            $category->billing_title = $request->billing_title;
             $category->save();
             return redirect()->route('mainTitle.index')->with('success','Updated successfully!');
 

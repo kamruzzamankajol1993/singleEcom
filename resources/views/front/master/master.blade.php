@@ -1,60 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Nanna Briyani">
-<meta name="author" content="Nanna Briyani">
-<link rel="icon" type="image/png" href="{{ asset('/') }}public/logo/logo.jpeg">
-<title>@yield('title')</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="{{ asset('/') }}public/front/vendor/slick/slick/slick.css" rel="stylesheet" type="text/css">
-<link href="{{ asset('/') }}public/front/vendor/slick/slick/slick-theme.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/bootstrap.min.css">
 
-<link href="{{ asset('/') }}public/front/vendor/icons/feather.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/fonts/flaticon.css">
 
-<link href="{{ asset('/') }}public/front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/nice-select.min.css">
 
-<link href="{{ asset('/') }}public/front/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/boxicons.min.css">
 
-<link href="{{ asset('/') }}public/front/vendor/sidebar/demo.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/meanmenu.css">
+
+<link rel="stylesheet" type="text/css" href="{{ asset('/') }}public/front/assets/css/settings.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('/') }}public/front/assets/css/layers.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('/') }}public/front/assets/css/navigation.css">
+
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/owl.theme.default.min.css">
+
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/modal-video.min.css">
+
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/style.css">
+
+<link rel="stylesheet" href="{{ asset('/') }}public/front/assets/css/responsive.css">
+<link href="https://fonts.cdnfonts.com/css/hind-siliguri" rel="stylesheet">
+<title>{{ $seoInfoTitle }}</title>
+<link rel="icon" type="image/png" href="{{ asset('/') }}{{ $seoInfoIcon }}">
 </head>
-<body class="fixed-bottom-bar">
-@include('front.include.header')
-<div class="osahan-home-page">
+<body>
 
-    @if(Route::is('menuInformation') || Route::is('checkOut') || Route::is('successPage') || Route::is('popularItem') || Route::is('orderList') )
+<div class="loader">
+<div class="d-table">
+<div class="d-table-cell">
+<div class="pre-load">
+<div class="inner one"></div>
+<div class="inner two"></div>
+<div class="inner three"></div>
+</div>
+</div>
+</div>
+</div>
 
-    @else
+<div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+        <center><h1 style="padding: 20px;">
 
-    @include('front.include.header_one')
 
-    @endif
+@if(!$mainTitle)
 
+@else
+            {{ $mainTitle->title }}
+            @endif
+
+        </h1></center>
+        </div>
+    </div>
+</div>
+
+
+
+@include('front.include.banner')
 
 
 @yield('body')
-</div>
-
-@include('front.include.mobile_header')
 
 
 @include('front.include.footer')
 
 
-@include('front.include.sidebar')
 
 
-<script  src="{{ asset('/') }}public/front/vendor/jquery/jquery.min.js"></script>
-<script  src="{{ asset('/') }}public/front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script  src="{{ asset('/') }}public/front/vendor/slick/slick/slick.min.js"></script>
 
-<script  src="{{ asset('/') }}public/front/vendor/sidebar/hc-offcanvas-nav.js"></script>
+<div class="go-top">
+<i class='bx bxs-up-arrow-circle'></i>
+<i class='bx bxs-up-arrow-circle'></i>
+</div>
 
-<script src="{{ asset('/') }}public/front/js/osahan.js"></script>
-@yield('script')
+
+<script src="{{ asset('/') }}public/front/assets/js/jquery.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/popper.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/bootstrap.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/form-validator.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/contact-form-script.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/jquery.ajaxchimp.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/jquery.nice-select.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/jquery.meanmenu.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/jquery.themepunch.revolution.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="{{ asset('/') }}public/front/assets/js/extensions/revolution.extension.video.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/jquery.mixitup.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/owl.carousel.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/jquery-modal-video.min.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/thumb-slide.js"></script>
+
+<script src="{{ asset('/') }}public/front/assets/js/custom.js"></script>
 </body>
 
 

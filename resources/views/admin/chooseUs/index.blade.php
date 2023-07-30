@@ -32,11 +32,9 @@ Choose Us
       <div class="row">
 
         <div class="col-md-6">
-            @if(count($categoryList) == 3)
 
-            @else
             <button type="button" data-toggle="modal" data-target="#modal-default" class="btn  bg-gradient-primary"><i class="fas fa-plus"></i> Add</button>
-@endif
+
             <div class="modal fade" id="modal-default">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -82,6 +80,7 @@ Choose Us
                                         <input type="file" class="form-control" id="" placeholder="Image" name="image">
 
                                     </div>
+                                    <small style="font-weight: 900;color:red;">Image Size:(480*266)px;format:png</small>
                                 </div>
 
 
@@ -91,6 +90,7 @@ Choose Us
                                         <input type="file" class="form-control" id="" placeholder="Image" name="image_one">
 
                                     </div>
+                                    <small style="font-weight: 900;color:red;">Image Size:(222*270)px;format:png</small>
                                 </div>
 
 
@@ -192,6 +192,7 @@ Choose Us
                                                     <input type="file" class="form-control" id="" placeholder="Image" name="image">
                                                     <img src="{{ asset('/') }}{{$allCategoryList->image }}" style="height:50px;"/>
                                                 </div>
+                                                <small style="font-weight: 900;color:red;">Image Size:(480*266)px;format:png</small>
                                             </div>
 
 
@@ -201,6 +202,7 @@ Choose Us
                                                     <input type="file" class="form-control" id="" placeholder="Image" name="image_one">
                                                     <img src="{{ asset('/') }}{{$allCategoryList->image_one }}" style="height:50px;"/>
                                                 </div>
+                                                <small style="font-weight: 900;color:red;">Image Size:(222*270)px;format:png</small>
                                             </div>
 
 

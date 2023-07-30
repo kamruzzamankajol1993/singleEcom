@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use DB;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $seoInfoIcon = DB::table('seos')->value('icon');
+        $seoInfoTitle = DB::table('seos')->value('title');
+
+        view()->share('seoInfoTitle', $seoInfoTitle);
+        view()->share('seoInfoIcon', $seoInfoIcon);
+        // view()->share('cartCollection1', $cartCollection1);
     }
 }

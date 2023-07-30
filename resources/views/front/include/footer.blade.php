@@ -1,48 +1,135 @@
-<footer class="section-footer border-top bg-dark">
+<footer class="footer-area pt-100 "  >
+    <div class="footer-shape">
+    <img src="{{ asset('/') }}public/front/assets/images/footer-right-shape.png" alt="Shape">
+    <img src="{{ asset('/') }}public/front/assets/images/shape5.png" alt="Shape">
+    </div>
     <div class="container">
-    <div class="footer-top padding-y py-5">
-    <div class="row">
-    <aside class="col-md-10 footer-about">
-    <article class="d-flex pb-3">
-    <div><img alt="{{ route('index') }}" src="{{ asset('/') }}public/logo/logo.jpeg" class="logo-footer me-3"></div>
-    <div>
-    <h6 class="title text-white">About Us</h6>
-    <p class="text-muted">Some short text about company like You might remember the Dell
-    computer commercials in which a youth reports.</p>
-    <div class="d-flex align-items-center">
-    <a class="btn btn-icon btn-outline-light me-1 btn-sm" title="Facebook" target="_blank" href="#"><i class="feather-facebook"></i></a>
-    <a class="btn btn-icon btn-outline-light me-1 btn-sm" title="Instagram" target="_blank" href="#"><i class="feather-instagram"></i></a>
-    <a class="btn btn-icon btn-outline-light me-1 btn-sm" title="Youtube" target="_blank" href="#"><i class="feather-youtube"></i></a>
-    <a class="btn btn-icon btn-outline-light me-1 btn-sm" title="Twitter" target="_blank" href="#"><i class="feather-twitter"></i></a>
-    </div>
-    </div>
-    </article>
-    </aside>
+    <div class="row justify-content-center">
+    <div class="col-sm-6 col-lg-4">
+    <div class="footer-item">
+    <div class="footer-logo">
+    <a class="logo" href="index.html">
+    <img src="{{ asset('/') }}{{ $seoInfoIcon }}" alt="Logo">
+    </a>
+    <ul>
+    <li>
+    <i class="flaticon-pin"></i>
+    <a href="#">
+        @if(!$contactList)
 
-    <aside class="col-sm-2 col-md-2 text-white">
-    <h6 class="title">Services</h6>
-    <ul class="list-unstyled hov_footer">
-    <li> <a href="#" class="text-muted">Delivery Support</a></li>
-    <li> <a href="#" class="text-muted">Contact Us</a></li>
-    <li> <a href="#" class="text-muted">Terms of use</a></li>
-    <li> <a href="#" class="text-muted">Privacy policy</a></li>
+        @else
+{{ $contactList->address }}
+        @endif
+
+
+    </a>
+    </li>
+    <li>
+    <i class="flaticon-phone-call"></i>
+    @if(!$contactList)
+
+    @else
+
+
+<a href="tel:{{ $contactList->phone_one }}">{{ $contactList->phone_one }}</a>
+    <a href="tel:{{ $contactList->phone_two }}">{{ $contactList->phone_two }}</a>
+    @endif
+
+
+
+
+    </li>
+    <li>
+    <i class="flaticon-email"></i>
+    @if(!$contactList)
+
+    @else
+    <a href="{{ $contactList->email_one }}"><span class="__cf_email__" >{{ $contactList->email_one }}</span></a>
+    <a href="{{ $contactList->email_two }}"><span class="__cf_email__" >{{ $contactList->email_two }}</span></a>
+    @endif
+    </li>
     </ul>
-    </aside>
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+    <div class="footer-item">
+    <div class="footer-services">
+    <h3>Our Policy</h3>
+    <ul>
+    <li>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Return Policy</a>
+     </li>
+
+    <a href="privacy-policy.html">Privacy Policy</a>
+    </li>
+    <li>
+    <a href="contact.html">Term & Condition</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4">
+        <div class="footer-item">
+        <div class="footer-services">
+        <h3>Customer Services</h3>
+        <ul>
+        <li>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Return Policy</a>
+         </li>
+
+        <a href="privacy-policy.html">Privacy Policy</a>
+        </li>
+        <li>
+        <a href="contact.html">Term & Condition</a>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
 
     </div>
 
+
+    <div class="row align-items-center">
+    <div class="col-sm-6 col-lg-6">
+    <div class="payment-cards">
+        <p>Copyright ©2020 </p>
     </div>
-
-
     </div>
-
-    <div class="footer-copyright border-top py-3 bg-light">
-    <div class="container d-flex align-items-center">
-    <p class="mb-0"> © 2023 Company All rights reserved </p>
-    <p class="text-muted mb-0 ms-auto d-flex align-items-center">
-    <!-- <a href="#" class="d-block"><img alt="#" src="img/appstore.png" height="40"></a>
-    <a href="#" class="d-block ms-3"><img alt="#" src="img/playmarket.png" height="40"></a> -->
-    </p>
+    <div class="col-sm-6 col-lg-6">
+    <div class="social-links">
+    <ul>
+    <li>
+    <a href="#" target="_blank">
+    <i class='bx bxl-facebook'></i>
+    </a>
+    </li>
+    <li>
+    <a href="#" target="_blank">
+    <i class='bx bxl-twitter'></i>
+    </a>
+    </li>
+    <li>
+    <a href="#" target="_blank">
+    <i class='bx bxl-linkedin'></i>
+    </a>
+    </li>
+    <li>
+    <a href="#" target="_blank">
+    <i class='bx bxl-skype'></i>
+    </a>
+    </li>
+    <li>
+    <a href="#" target="_blank">
+    <i class='bx bxl-youtube'></i>
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
     </div>
     </div>
     </footer>

@@ -18,7 +18,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Nanna</b> BRIYANI</a>
+    <img src="{{ asset('/') }}{{ $seoInfoIcon }}" class="img-circle elevation-2" alt="User Image">
   </div>
   <!-- /.login-logo -->
   <div class="card">

@@ -97,6 +97,7 @@ About Us
                                         <input type="file" class="form-control" id="" placeholder="Image" name="image">
 
                                     </div>
+                                    <small style="font-weight: 900;color:red;">Image Size:(367*509)px;format:png</small>
                                 </div>
 
 
@@ -215,6 +216,7 @@ About Us
                                                     <input type="file" class="form-control" id="" placeholder="Image" name="image">
                                                     <img src="{{ asset('/') }}{{$allCategoryList->image }}" style="height:50px;"/>
                                                 </div>
+                                                <small style="font-weight: 900;color:red;">Image Size:(367*509)px;format:png</small>
                                             </div>
 
 

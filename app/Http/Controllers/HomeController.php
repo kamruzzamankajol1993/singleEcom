@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Category;
 use App\Models\Food;
+use App\Models\Billing;
 class HomeController extends Controller
 {
     /**
@@ -25,10 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $allOrder = Order::count();
-        $totalPendingOrder = Order::where('order_status','Pending')->count();
-        $totalMenu = Category::count();
-        $totalFood = Food::count();
-        return view('admin.index',compact('totalFood','totalMenu','allOrder','totalPendingOrder'));
+        $allOrder = Billing::count();
+        $totalPendingOrder = Billing::where('status','Pending')->count();
+        $totaldeliveredOrder = Billing::where('status','Delivered')->count();
+        $totalCancelledOrder = Billing::where('status','Cancelled')->count();
+        return view('admin.index',compact('totalCancelledOrder','totaldeliveredOrder','allOrder','totalPendingOrder'));
     }
 }
